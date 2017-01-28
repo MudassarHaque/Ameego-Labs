@@ -1,0 +1,463 @@
+/* YOUR CUSTOM STYLES */
+
+#particles-js{
+    width: 100%;
+    height: 100%; 
+}
+
+main{
+    padding-top:3rem;
+    padding-bottom: 2rem;
+}
+
+html,
+body,
+.view, .view2, .view3, .view4{
+    height: 100%;
+    background-color: #F5F8F9;
+
+}
+
+.view{
+    background:url("https://firebasestorage.googleapis.com/v0/b/sample-d269e.appspot.com/o/back1.jpg?alt=media&token=1578e25a-eac0-412c-9a37-64d0c122cfae") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.view2{
+    background:url("https://firebasestorage.googleapis.com/v0/b/sample-d269e.appspot.com/o/back2.jpg?alt=media&token=7a4c58a9-950a-4452-bed3-203eb08ad614") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.view3{
+
+    background:url("https://firebasestorage.googleapis.com/v0/b/sample-d269e.appspot.com/o/back3.jpg?alt=media&token=8843bf02-38c0-4a98-9f7e-99b31776302e") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+}
+
+.view4{
+    background:url("https://firebasestorage.googleapis.com/v0/b/sample-d269e.appspot.com/o/back4.jpg?alt=media&token=210de41b-b115-4075-a091-66364af11bee") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+/* preloading animation starts*/
+#loader-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+}
+#loader {
+    display: block;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    width: 150px;
+    height: 150px;
+    margin: -75px 0 0 -75px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #3498db;
+
+    -webkit-animation: spin 2s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
+    animation: spin 2s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
+
+    z-index: 1001;
+}
+
+#loader:before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #e74c3c;
+
+    -webkit-animation: spin 3s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
+    animation: spin 3s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
+}
+
+#loader:after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #f9c922;
+
+    -webkit-animation: spin 1.5s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
+    animation: spin 1.5s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
+}
+
+@-webkit-keyframes spin {
+    0%   { 
+        -webkit-transform: rotate(0deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+        -ms-transform: rotate(0deg);  /* IE 9 */
+        transform: rotate(0deg);  /* Firefox 16+, IE 10+, Opera */
+    }
+    100% {
+        -webkit-transform: rotate(360deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+        -ms-transform: rotate(360deg);  /* IE 9 */
+        transform: rotate(360deg);  /* Firefox 16+, IE 10+, Opera */
+    }
+}
+@keyframes spin {
+    0%   { 
+        -webkit-transform: rotate(0deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+        -ms-transform: rotate(0deg);  /* IE 9 */
+        transform: rotate(0deg);  /* Firefox 16+, IE 10+, Opera */
+    }
+    100% {
+        -webkit-transform: rotate(360deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+        -ms-transform: rotate(360deg);  /* IE 9 */
+        transform: rotate(360deg);  /* Firefox 16+, IE 10+, Opera */
+    }
+}
+
+
+#loader-wrapper .loader-section {
+    position: fixed;
+    top: 0;
+    width: 51%;
+    height: 100%;
+    background: #222;
+    z-index: 1000;
+}
+
+#loader-wrapper .loader-section.section-left {
+    left: 0;
+}
+
+#loader-wrapper .loader-section.section-right {
+    right: 0;
+}
+
+.loaded #loader-wrapper .loader-section.section-left {
+    -webkit-transform: translateX(-100%);  /* Chrome, Opera 15+, Safari 3.1+ */
+    -ms-transform: translateX(-100%);  /* IE 9 */
+    transform: translateX(-100%);  /* Firefox 16+, IE 10+, Opera */
+}
+
+.loaded #loader-wrapper .loader-section.section-right {
+    -webkit-transform: translateX(100%);  /* Chrome, Opera 15+, Safari 3.1+ */
+    -ms-transform: translateX(100%);  /* IE 9 */
+    transform: translateX(100%);  /* Firefox 16+, IE 10+, Opera */
+}
+
+.loaded #loader {
+    opacity: 0;
+}
+
+.loaded #loader-wrapper {
+    visibility: hidden;
+}
+
+.loaded #loader {
+    opacity: 0;
+    -webkit-transition: all 0.3s ease-out; 
+    transition: all 0.3s ease-out;
+}
+
+.loaded #loader-wrapper .loader-section.section-right,
+.loaded #loader-wrapper .loader-section.section-left {
+
+    -webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000); 
+    transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+}
+
+.loaded #loader-wrapper {
+    -webkit-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+    transform: translateY(-100%);
+
+    -webkit-transition: all 0.3s 1s ease-out; 
+    transition: all 0.3s 1s ease-out;
+}
+
+/*prealoding animation ends*/
+
+
+.navbar {
+    background-color: transparent no-repeat center center fixed;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    display: none;
+}
+
+
+.navbar-dark .navbar-nav .nav-link {
+    color: #fff;
+}
+.scrolling-navbar {
+    -webkit-transition: background .5s ease-in-out, padding .5s ease-in-out;
+    -moz-transition: background .5s ease-in-out, padding .5s ease-in-out;
+    transition: background .5s ease-in-out, padding .5s ease-in-out;
+}
+
+.top-nav-collapse {
+    background-color: #25764B;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+    .navbar {
+        background-color: #25764B;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        text-align: center;
+    }
+
+}
+
+@media (max-width: 992px) {
+    .description {
+
+        text-align: center;
+    }
+
+
+}
+@media (max-width: 1440px){
+
+}
+
+.description {
+
+    color: #fff
+}
+
+/*@media (max-height: 414px){/*this is not applying (it is for potrait responsive image)
+bg-1{
+
+height: 200px;
+width: 200px;
+}
+}*/
+
+
+.bg-1{
+
+    height: 300px;
+    width: auto;
+
+}
+
+.logo{
+    width: 100px;
+    height: 100px;
+}
+
+
+
+#foot{
+    height: 45px;
+    width: 100%;
+
+}
+
+.md-form .fa{
+    position: relative;
+    float: left;
+
+}
+.getIt img{
+
+    height: 100px;
+}
+                                  /* ONLY FOR MOZILLA */
+@-moz-document url-prefix() 
+    { 
+    .ameego{
+        margin-left: 75px;
+    }
+    .break{
+        margin-left: -355px;
+    }
+    @media (max-width: 410px)
+    { 
+        .break{
+            margin-left: -310px;
+        }
+    }
+    @media (min-width: 992px) 
+    { 
+        .ameego{
+            margin-left: 35px;
+        }
+
+        .break{
+            margin-left: -350px;
+        }
+    }
+    @media (min-width: 991px) and (max-width: 1199px)
+    {  
+        .ameego{
+            margin-left: 50px; 
+        }
+        .break{
+            margin-right: -200px; 
+        }
+    }
+}
+    /* / MOZZILA*/
+ /* ONLY FOR IE */
+
+ @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+                .ameego{
+                    margin-left: 40px;
+                }
+                .break{
+                    margin-left: -355px;
+                }
+               
+            }
+
+/* / IE*/
+.ameego{
+
+
+    position: absolute;
+    top: 70px;
+    bottom: 0;
+}
+
+.break{
+    position: absolute;
+    top: 1;
+    bottom: 0;
+
+}
+@media(min-width: 992px)
+{
+    .icon{
+        position: relative;
+        left: 194px;
+    }
+
+}
+
+#particles-js{
+    position: absolute; /* need absolute value bcuz image is also absolute*/
+}
+
+.number{
+    background-color: #37474F;
+    border-radius: 5px;
+    height: 50px;
+
+}
+
+.unselectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/*Social Buttons*/
+
+#social .row i {
+    color: #34495e;
+    border: 2px solid transparent;
+    border-radius: 0%;
+    padding: 1em;
+    position: relative;
+    background: transparent;
+    -webkit-animation: animateback 0.2s; /* Chrome, Opera 15+, Safari 3.1+ */
+    -webkit-animation-fill-mode: forwards;/* Chrome, Opera 15+, Safari 3.1+ */
+    -ms-animation: animateback 0.2s; /* IE 9 */
+    -ms-animation-fill-mode: forwards;/* IE 9 */
+    animation: animateback 0.2s ;/* Firefox 16+, IE 10+, Opera */
+    animation-fill-mode: forwards;/* Firefox 16+, IE 10+, Opera */
+}
+#social .row i:hover {
+    top: -2px;
+    -webkit-animation: animate 0.2s;/* Chrome, Opera 15+, Safari 3.1+ */
+    -webkit-animation-fill-mode: forwards; /* Chrome, Opera 15+, Safari 3.1+ */
+    -ms-animation: animate 0.2s;/* IE 9 */
+    -ms-animation-fill-mode: forwards; /* IE 9 */
+    animation: animate 0.2s ;/* Firefox 16+, IE 10+, Opera */
+    animation-fill-mode: forwards;/* Firefox 16+, IE 10+, Opera */
+}
+/*button animation*/
+@-webkit-keyframes animate{
+
+    from{border-radius: 0%;}
+    to{border-radius: 50%;}
+
+
+}
+@-webkit-keyframes animateback{
+
+    from{border-radius: 50%;}
+    to{border-radius: 0%;}
+
+
+}
+@keyframes animate{
+
+    from{border-radius: 0%;}
+    to{border-radius: 50%;}
+
+
+}
+@keyframes animateback{
+
+    from{border-radius: 50%;}
+    to{border-radius: 0%;}
+
+    /*button animate*/
+}
+#social .row i:not(:first-child) {
+    margin-left: 1em;
+}
+#social .row i:nth-child(1) {
+    color: #3b5998;
+    border-bottom-color: #3b5998;
+}
+#social .row i:nth-child(2) {
+    color: #00a0d1;
+    border-bottom-color: #00a0d1;
+}
+#social .row i:nth-child(3) {
+    color: #db4a39;
+    border-bottom-color: #db4a39;
+}
+#social .row i:nth-child(4) {
+    color: #c8232c;
+    border-bottom-color: #c8232c;
+}
+#social .row i:nth-child(5) {
+    color: #ea4c89;
+    border-bottom-color: #ea4c89;
+}
+/*social button*/
+
+
+
+
+
+
